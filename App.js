@@ -51,6 +51,7 @@ export default function App() {
       id: uuid(),
       task: newTask,
     };
+    console.log(tasks)
     console.log(appendTask)
     const newTasks = [...tasks, appendTask];
     setNewTask("");
@@ -113,7 +114,7 @@ export default function App() {
       <FlatList
         data={tasks}
         renderItem={({ item }) => {
-          return <TaskItem deleteTaskHandler={deleteTaskHandler} task={item} />;
+          return <TaskItem tasks={tasks} setTasks={setTasks} deleteTaskHandler={deleteTaskHandler} task={item} />;
         }}
         keyExtractor={(item) => item.id}
       />

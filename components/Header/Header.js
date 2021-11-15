@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/techolution.png";
 const Header = () => {
   return (
     <View style={styles.container}>
